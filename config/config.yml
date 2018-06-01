@@ -6,7 +6,7 @@ parameters:
         configuration:
 
         hooks:
-            - 'moduleRoutes'
+            - 'actionDispatcherBefore'
 
         tabs:
             - {name: 'Skeleton', parent_class_name: 'AdminParentModulesSf', class_name: 'AdminSkeletonTab', visible: false}

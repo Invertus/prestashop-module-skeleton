@@ -10,10 +10,7 @@
   "autoload": {
     "psr-4": {
       "Invertus\\Skeleton\\": "src/"
-    },
-    "classmap": [
-      "src/Entity"
-    ]
+    }
   },
   "require": {
     "php": ">=5.4"

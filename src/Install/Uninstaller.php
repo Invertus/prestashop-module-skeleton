@@ -16,10 +16,10 @@ use Configuration;
 use Tools;
 
 /**
- * Class UnInstaller - responsible for module installation process
+ * Class Uninstaller - responsible for module installation process
  * @package Invertus\Skeleton\Install
  */
-class UnInstaller extends AbstractInstaller
+class Uninstaller extends AbstractInstaller
 {
     /**
      * @var \Skeleton

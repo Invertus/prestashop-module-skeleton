@@ -11,7 +11,7 @@
  */
 
 use Invertus\Skeleton\Install\Installer;
-use Invertus\Skeleton\Install\UnInstaller;
+use Invertus\Skeleton\Install\Uninstaller;
 use Symfony\Component\Config\ConfigCache;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Dumper\PhpDumper;
@@ -46,7 +46,6 @@ class Skeleton extends Module
         $this->compile();
     }
 
-
     public function getTabs()
     {
         /**
@@ -80,29 +79,16 @@ class Skeleton extends Module
     public function uninstall()
     {
         /**
-         * @var UnInstaller $unInstaller
+         * @var Uninstaller $unInstaller
          */
         $unInstaller = $this->getContainer()->get('uninstaller');
 
         return parent::uninstall() && $unInstaller->init();
     }
 
-    /**
-     * Used for module auto load in admin controllers
-     */
-    public function hookModuleRoutes()
+    public function hookActionDispatcherBefore()
     {
-        $tabs = $this->getTabs();
-
-        $controllers = [];
-
-        foreach ($tabs as $tab) {
-            $controllers[] = $tab['class_name'];
-        }
-
-        if (in_array(Tools::getValue('controller'), $controllers)) {
-            $this->autoLoad();
-        }
+        $this->autoLoad();
     }
 
     /**
@@ -116,7 +102,7 @@ class Skeleton extends Module
     }
 
     /**
-     * Auto loads project files from /src directory
+     * Autoload's project files from /src directory
      */
     private function autoLoad()
     {
@@ -148,7 +134,6 @@ class Skeleton extends Module
             $loader->load('config.yml');
             $containerBuilder->compile();
             $dumper = new PhpDumper($containerBuilder);
-
 
             $containerConfigCache->write(
                 $dumper->dump(['class' => $containerClass]),

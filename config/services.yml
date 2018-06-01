@@ -18,7 +18,7 @@ services:
             - '%module_settings%'
 
     uninstaller:
-        class: 'Invertus\Skeleton\Install\UnInstaller'
+        class: 'Invertus\Skeleton\Install\Uninstaller'
         arguments:
             - '@skeleton.module'
             - '%module_settings%'
