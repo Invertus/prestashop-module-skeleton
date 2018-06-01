@@ -11,6 +11,7 @@
  */
 
 namespace Invertus\Skeleton\Install;
+
 use ReflectionClass;
 
 /**
