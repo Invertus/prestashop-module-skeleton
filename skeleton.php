@@ -48,18 +48,14 @@ class Skeleton extends Module
 
     public function getTabs()
     {
-        /**
-         * @var Tab $tab
-         */
+        /** @var Tab $tab */
         $tab = $this->getContainer()->get('install.tab');
         return $tab->getTabs();
     }
 
     public function getContent()
     {
-        /**
-         * @var Tab $tab
-         */
+        /** @var Tab $tab */
         $tab = $this->getContainer()->get('install.tab');
 
         $redirectLink = $this->context->link->getAdminLink($tab->getControllerInfo());
@@ -68,9 +64,7 @@ class Skeleton extends Module
 
     public function install()
     {
-        /**
-         * @var Installer $installer
-         */
+        /** @var Installer $installer */
         $installer = $this->getContainer()->get('installer');
 
         return parent::install() && $installer->init();
@@ -78,9 +72,7 @@ class Skeleton extends Module
 
     public function uninstall()
     {
-        /**
-         * @var Uninstaller $unInstaller
-         */
+        /** @var Uninstaller $unInstaller */
         $unInstaller = $this->getContainer()->get('uninstaller');
 
         return parent::uninstall() && $unInstaller->init();

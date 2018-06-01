@@ -91,6 +91,7 @@ class Uninstaller extends AbstractInstaller
      * Executes sql in uninstall.sql file which is used for uninstalling
      *
      * @return bool
+     *
      * @throws \Exception
      */
     private function uninstallDb()
