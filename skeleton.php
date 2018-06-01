@@ -16,7 +16,6 @@ use Symfony\Component\Config\ConfigCache;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Dumper\PhpDumper;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
-use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Symfony\Component\Config\FileLocator;
 use \Invertus\Skeleton\Install\Tab;
 
