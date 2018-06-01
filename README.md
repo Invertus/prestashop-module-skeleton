@@ -7,15 +7,16 @@ PrestaShop module skeleton used for version >= 1.7.1
 clone repository and add it to modules folder on a PrestaShop system
 
 ### Prerequisites
-
 * composer
 * PHP >= 5.4
 
 ### Installing
 
-1. Execute *composer install*.
-2. Install module.
+1. Change folder name and main file name and class to your module name.
+2. Find and replace on module scope all texts which starts with *Skeleton* or *skeleton* string.
+3. Execute *composer install*.
+4. Install module.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
