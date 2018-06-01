@@ -82,7 +82,7 @@ class Skeleton extends Module
         /**
          * @var UnInstaller $unInstaller
          */
-        $unInstaller = $this->getContainer()->get('unInstaller');
+        $unInstaller = $this->getContainer()->get('uninstaller');
 
         return parent::uninstall() && $unInstaller->init();
     }

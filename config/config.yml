@@ -7,3 +7,7 @@ parameters:
 
         hooks:
             - 'moduleRoutes'
+
+        tabs:
+            - {name: 'Skeleton', parent_class_name: 'AdminParentModulesSf', class_name: 'AdminSkeletonTab', visible: false}
+            - {name: 'Info', parent_class_name: 'AdminParentModulesSf', class_name: 'AdminSkeletonInfo'}

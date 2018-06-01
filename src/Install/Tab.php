@@ -12,30 +12,26 @@
 
 namespace Invertus\Skeleton\Install;
 
-use ReflectionClass;
-
 /**
  * Class Tab - module admin tab settings
  * @package Invertus\Skeleton\Install
  */
 class Tab
 {
-    /**
-     * @var \Skeleton
-     */
-    private $module;
-
-    private $controllerInvisible = 'AdminSkeletonTab';
     private $controllerInfo = 'AdminSkeletonInfo';
+    /**
+     * @var array
+     */
+    private $configuration;
 
     /**
      * Tab constructor.
      *
-     * @param \Skeleton $module
+     * @param array $configuration
      */
-    public function __construct(\Skeleton $module)
+    public function __construct(array $configuration)
     {
-        $this->module = $module;
+        $this->configuration = $configuration;
     }
 
     /**
@@ -48,21 +44,6 @@ class Tab
 
     public function getTabs()
     {
-        $reflection = new ReflectionClass($this);
-        $shortClassName = $reflection->getShortName();
-
-        return [
-            [
-                'name' => $this->module->displayName,
-                'ParentClassName' => 'AdminParentModulesSf',
-                'class_name' => $this->controllerInvisible,
-                'visible' => false
-            ],
-            [
-                'name' => $this->module->l('Info', $shortClassName),
-                'ParentClassName' => 'AdminParentModulesSf',
-                'class_name' => $this->controllerInfo,
-            ]
-        ];
+        return isset($this->configuration['tabs']) ? $this->configuration['tabs'] : [];
     }
 }
