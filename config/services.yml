@@ -1,0 +1,24 @@
+services:
+    SkeletonModule:
+        class: 'Skeleton'
+        factory: ['Module', 'getInstanceByName']
+        arguments:
+            - 'skeleton'
+
+#    Installers
+    install.tab:
+        class: 'Invertus\Skeleton\Install\Tab'
+        arguments:
+            - '@SkeletonModule'
+
+    installer:
+        class: 'Invertus\Skeleton\Install\Installer'
+        arguments:
+            - '@SkeletonModule'
+            - '%module_settings%'
+
+    unInstaller:
+        class: 'Invertus\Skeleton\Install\UnInstaller'
+        arguments:
+            - '@SkeletonModule'
+            - '%module_settings%'

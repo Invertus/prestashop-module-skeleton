@@ -1,0 +1,6 @@
+*.xml
+.idea/
+var/cache/container.php
+var/cache/container.php.meta
+var/logs/*
+/vendor

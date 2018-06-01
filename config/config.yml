@@ -1,0 +1,9 @@
+imports:
+    - { resource: 'services.yml' }
+
+parameters:
+    module_settings:
+        configuration:
+
+        hooks:
+            - 'moduleRoutes'

@@ -1,0 +1,32 @@
+{
+  "name": "invertus/skeleton",
+  "type": "prestashop-module",
+  "authors": [
+    {
+      "name": "Invertus",
+      "email": "help@invertus.eu"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Invertus\\Skeleton\\": "src/"
+    },
+    "classmap": [
+      "src/Entity"
+    ]
+  },
+  "require": {
+    "php": ">=5.4"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.2"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "php -r \"copy('config/pre-commit', '.git/hooks/pre-commit');\""
+    ],
+    "post-update-cmd": [
+      "php -r \"copy('config/pre-commit', '.git/hooks/pre-commit');\""
+    ]
+  }
+}
