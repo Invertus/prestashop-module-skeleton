@@ -16,7 +16,6 @@ use Symfony\Component\Config\ConfigCache;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Dumper\PhpDumper;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
-use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Symfony\Component\Config\FileLocator;
 use \Invertus\Skeleton\Install\Tab;
 
@@ -37,13 +36,13 @@ class Skeleton extends Module
         $this->tab = 'other_modules';
         $this->name = 'skeleton';
         $this->version = '1.0.0';
-        $this->displayName = $this->l('Skeleton');
-        $this->description = $this->l('This is module description');
         $this->author = 'Invertus';
 
         parent::__construct();
         $this->autoLoad();
         $this->compile();
+        $this->displayName = $this->l('Skeleton');
+        $this->description = $this->l('This is module description');
     }
 
     public function getTabs()
@@ -98,11 +97,7 @@ class Skeleton extends Module
      */
     private function autoLoad()
     {
-        $autoLoadPath = $this->getLocalPath().'/vendor/autoload.php';
-
-        if (!file_exists($autoLoadPath)) {
-            throw new FileNotFoundException('autoload.php file was not found on your module. Run composer install.');
-        }
+        $autoLoadPath = $this->getLocalPath().'vendor/autoload.php';
 
         require_once $autoLoadPath;
     }
