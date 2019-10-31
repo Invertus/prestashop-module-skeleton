@@ -32,8 +32,6 @@ class Installer extends AbstractInstaller
     private $configuration;
 
     /**
-     * Installer constructor.
-     *
      * @param \Skeleton $module
      * @param array $configuration
      */
@@ -44,7 +42,7 @@ class Installer extends AbstractInstaller
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function init()
     {
@@ -64,7 +62,7 @@ class Installer extends AbstractInstaller
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     protected function getSqlStatements($fileName)
     {
@@ -75,7 +73,6 @@ class Installer extends AbstractInstaller
     }
 
     /**
-     *
      * @return bool
      *
      * @throws \Exception

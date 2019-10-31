@@ -25,7 +25,7 @@ abstract class AbstractInstaller
     /**
      * used to parse sql files, replace variables and prepare for execution
      *
-     * @param  $fileName
+     * @param string $fileName
      * @return string
      */
     abstract protected function getSqlStatements($fileName);
@@ -33,7 +33,7 @@ abstract class AbstractInstaller
     /**
      * Gets current file name. Used for translations
      *
-     * @param $classInstance
+     * @param string $classInstance
      *
      * @return string
      *

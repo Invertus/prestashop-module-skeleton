@@ -30,8 +30,6 @@ class Uninstaller extends AbstractInstaller
     private $configuration;
 
     /**
-     * Installer constructor.
-     *
      * @param \Skeleton $module
      * @param array $configuration
      */
@@ -42,7 +40,7 @@ class Uninstaller extends AbstractInstaller
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function init()
     {
@@ -55,7 +53,7 @@ class Uninstaller extends AbstractInstaller
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     protected function getSqlStatements($fileName)
     {
@@ -73,13 +71,7 @@ class Uninstaller extends AbstractInstaller
             return;
         }
 
-        $configurationNames = array_keys($configuration);
-
-        if (empty($configurationNames)) {
-            return;
-        }
-
-        foreach ($configurationNames as $name) {
+        foreach (array_keys($configuration) as $name) {
             if (!Configuration::deleteByName($name)) {
                 continue;
             }
