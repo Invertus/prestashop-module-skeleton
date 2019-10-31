@@ -14,7 +14,6 @@ namespace Invertus\Skeleton\Install;
 
 /**
  * Class Tab - module admin tab settings
- * @package Invertus\Skeleton\Install
  */
 class Tab
 {

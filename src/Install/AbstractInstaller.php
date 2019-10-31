@@ -15,16 +15,13 @@ namespace Invertus\Skeleton\Install;
 use Db;
 use Exception;
 
-/**
- * Class AbstractInstaller
- * @package Invertus\Skeleton\Install
- */
 abstract class AbstractInstaller
 {
     /**
      * @return bool
      */
     abstract public function init();
+
     /**
      * used to parse sql files, replace variables and prepare for execution
      *
