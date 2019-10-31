@@ -71,13 +71,7 @@ class Uninstaller extends AbstractInstaller
             return;
         }
 
-        $configurationNames = array_keys($configuration);
-
-        if (empty($configurationNames)) {
-            return;
-        }
-
-        foreach ($configurationNames as $name) {
+        foreach (array_keys($configuration) as $name) {
             if (!Configuration::deleteByName($name)) {
                 continue;
             }
