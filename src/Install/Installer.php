@@ -84,7 +84,7 @@ class Installer extends AbstractInstaller
     {
         $hooks = $this->configuration['hooks'];
 
-        if (empty($hooks) || null === $hooks) {
+        if (empty($hooks)) {
             return true;
         }
 
@@ -113,7 +113,7 @@ class Installer extends AbstractInstaller
     {
         $configuration = $this->configuration['configuration'];
 
-        if (empty($configuration) || null === $configuration) {
+        if (empty($configuration)) {
             return true;
         }
 
