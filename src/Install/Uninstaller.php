@@ -17,7 +17,6 @@ use Tools;
 
 /**
  * Class Uninstaller - responsible for module installation process
- * @package Invertus\Skeleton\Install
  */
 class Uninstaller extends AbstractInstaller
 {

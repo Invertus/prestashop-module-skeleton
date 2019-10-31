@@ -19,7 +19,6 @@ use Tools;
 
 /**
  * Class Installer - responsible for module installation process
- * @package Invertus\Skeleton\Install
  */
 class Installer extends AbstractInstaller
 {
