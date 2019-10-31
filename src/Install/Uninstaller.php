@@ -70,13 +70,13 @@ class Uninstaller extends AbstractInstaller
     {
         $configuration = $this->configuration['configuration'];
 
-        if (null === $configuration || empty($configuration)) {
+        if (empty($configuration)) {
             return;
         }
 
         $configurationNames = array_keys($configuration);
 
-        if (empty($configurationNames) || null === $configurationNames) {
+        if (empty($configurationNames)) {
             return;
         }
 
