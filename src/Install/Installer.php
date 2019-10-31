@@ -32,8 +32,6 @@ class Installer extends AbstractInstaller
     private $configuration;
 
     /**
-     * Installer constructor.
-     *
      * @param \Skeleton $module
      * @param array $configuration
      */

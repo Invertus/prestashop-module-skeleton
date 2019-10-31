@@ -17,15 +17,17 @@ namespace Invertus\Skeleton\Install;
  */
 class Tab
 {
+    /**
+     * @var string info controller name
+     */
     private $controllerInfo = 'AdminSkeletonInfo';
+
     /**
      * @var array
      */
     private $configuration;
 
     /**
-     * Tab constructor.
-     *
      * @param array $configuration
      */
     public function __construct(array $configuration)
@@ -41,6 +43,9 @@ class Tab
         return $this->controllerInfo;
     }
 
+    /**
+     * @return array
+     */
     public function getTabs()
     {
         return isset($this->configuration['tabs']) ? $this->configuration['tabs'] : [];
