@@ -42,7 +42,7 @@ class Uninstaller extends AbstractInstaller
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function init()
     {
@@ -55,7 +55,7 @@ class Uninstaller extends AbstractInstaller
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     protected function getSqlStatements($fileName)
     {
